@@ -1,0 +1,251 @@
+{
+ "model": "qwen2.5:7b",
+ "stats": {
+  "requested": 60,
+  "accepted": 60,
+  "first_try": 60,
+  "rejected": 0
+ },
+ "notes": {
+  "848428": {
+   "note": "The sender's balance dropped to zero, matching the transfer amount exactly, and the receiver's balance did not change. This transaction should be reviewed.",
+   "attempts": 1
+  },
+  "955157": {
+   "note": "The transaction shows the sender's balance dropping to zero, the transfer amount matching the sender's balance exactly, and the receiver's balance not changing as expected. It should be reviewed.",
+   "attempts": 1
+  },
+  "899577": {
+   "note": "The transaction shows the sender's balance dropping to zero, the amount transferred exactly matching their balance, and the receiver's balance unchanged. This should be reviewed.",
+   "attempts": 1
+  },
+  "899578": {
+   "note": "The transaction involves a large, 100% balance transfer to a personal account, leaving the sender with zero. This should be reviewed.",
+   "attempts": 1
+  },
+  "848429": {
+   "note": "The transaction involves a large, 100% balance transfer to a personal account, leaving the sender with zero balance. This should be reviewed.",
+   "attempts": 1
+  },
+  "955158": {
+   "note": "The transaction involves a large, 100% balance transfer to a personal account, leaving the sender with zero balance. This should be reviewed.",
+   "attempts": 1
+  },
+  "870140": {
+   "note": "The transaction shows the sender's balance dropping to zero, the amount transferred matching their balance exactly, and the receiver's balance unchanged. This should be reviewed.",
+   "attempts": 1
+  },
+  "870141": {
+   "note": "The transaction involves a large, 100% balance transfer to a personal account, leaving the sender with zero. This should be reviewed.",
+   "attempts": 1
+  },
+  "739293": {
+   "note": "The transaction involves a transfer equal to the sender's entire balance, leaving them with zero. This should be reviewed, especially given the receiver is a personal account.",
+   "attempts": 1
+  },
+  "739294": {
+   "note": "The transaction involves a large, 100% balance transfer to a personal account, leaving the sender with zero balance. This should be reviewed.",
+   "attempts": 1
+  },
+  "742060": {
+   "note": "The sender is left with a zero balance, transferring exactly 100% of their funds. This transaction should be reviewed.",
+   "attempts": 1
+  },
+  "742061": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account, which is unusual for a cash-out. It should be reviewed.",
+   "attempts": 1
+  },
+  "751771": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "756497": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "761852": {
+   "note": "The sender's balance was exactly depleted, and the transfer was 100% of their balance. This transaction should be reviewed.",
+   "attempts": 1
+  },
+  "765268": {
+   "note": "The transaction involves a full balance transfer to a personal account, leaving the sender with zero. This should be reviewed.",
+   "attempts": 1
+  },
+  "765269": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly their available amount to a personal account, which is unusual for a cash-out. It should be reviewed.",
+   "attempts": 1
+  },
+  "767468": {
+   "note": "The transaction involves a transfer equal to the sender's remaining balance to a personal account, which is unusual. It should be reviewed.",
+   "attempts": 1
+  },
+  "769762": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "782395": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds. This should be reviewed.",
+   "attempts": 1
+  },
+  "788647": {
+   "note": "The sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This transaction should be reviewed.",
+   "attempts": 1
+  },
+  "792109": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "800385": {
+   "note": "The transaction shows the sender is left with zero balance, transferring exactly their entire amount to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "817010": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "817011": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly their available amount, and the receiver is a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "819198": {
+   "note": "The sender is left with zero balance, transferring exactly 100% of their funds. This transaction should be reviewed.",
+   "attempts": 1
+  },
+  "819543": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "841751": {
+   "note": "The sender's balance dropped to zero, the transfer was exactly 100% of their balance, and the receiver's balance did not change as expected. This transaction should be reviewed.",
+   "attempts": 1
+  },
+  "854216": {
+   "note": "The transaction involves a transfer of the sender's entire balance, leaving them with zero. This pattern, combined with the receiver being a personal account, is unusual and should be reviewed.",
+   "attempts": 1
+  },
+  "854217": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly their available amount to a personal account, which is unusual for a cash-out. It should be reviewed.",
+   "attempts": 1
+  },
+  "854856": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds. This should be reviewed.",
+   "attempts": 1
+  },
+  "861645": {
+   "note": "The transaction involves a transfer equal to the sender's remaining balance to a personal account, which is unusual. It should be reviewed.",
+   "attempts": 1
+  },
+  "882284": {
+   "note": "The sender is left with zero balance, transferring exactly their entire amount to a personal account. This transaction should be reviewed.",
+   "attempts": 1
+  },
+  "896003": {
+   "note": "The transaction involves a transfer of the sender's entire balance to a personal account, leaving them with zero. This should be reviewed.",
+   "attempts": 1
+  },
+  "911853": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "911854": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly their available amount, and the receiver is a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "919658": {
+   "note": "The transaction shows the sender is left with zero balance, transferring exactly their available amount to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "929776": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds. This should be reviewed.",
+   "attempts": 1
+  },
+  "929777": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account, which is unusual for a cash-out. It should be reviewed.",
+   "attempts": 1
+  },
+  "936783": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "941414": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "941415": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly their available amount to a personal account, which is unusual for a cash-out. It should be reviewed.",
+   "attempts": 1
+  },
+  "945639": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly their entire balance to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "956900": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly their available amount to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "958716": {
+   "note": "The transaction involves a transfer equal to the sender's entire balance, leaving them with zero. This should be reviewed, especially given the receiver is a personal account.",
+   "attempts": 1
+  },
+  "958717": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account, which is unusual for a cash-out. It should be reviewed.",
+   "attempts": 1
+  },
+  "960909": {
+   "note": "The sender's balance dropped to zero, the transfer was exactly 100% of their balance, and the receiver's balance did not change as expected. This transaction should be reviewed.",
+   "attempts": 1
+  },
+  "960910": {
+   "note": "The transaction involves a large, 100% balance transfer to a personal account, leaving the sender with zero. This should be reviewed.",
+   "attempts": 1
+  },
+  "985194": {
+   "note": "The transaction shows the sender is left with zero balance, matching the exact amount transferred, which is 100% of their balance. The receiver is a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "985195": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly their available amount, and the receiver is a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "985996": {
+   "note": "The transaction shows the sender is left with zero balance, transferring exactly their entire amount to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "992140": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their balance, and the receiver's balance did not change as expected. This should be reviewed.",
+   "attempts": 1
+  },
+  "992141": {
+   "note": "The transaction involves a large, 100% balance transfer to a personal account, leaving the sender with zero. This should be reviewed.",
+   "attempts": 1
+  },
+  "998512": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly their available amount to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "998513": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "999221": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account. This should be reviewed.",
+   "attempts": 1
+  },
+  "999222": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account, which is unusual for a cash-out. It should be reviewed.",
+   "attempts": 1
+  },
+  "751772": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly 100% of their funds to a personal account, which is unusual for a cash-out. It should be reviewed.",
+   "attempts": 1
+  },
+  "756498": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly their available amount to a personal account, which is unusual for a cash-out. It should be reviewed.",
+   "attempts": 1
+  },
+  "761853": {
+   "note": "The transaction shows the sender is left with a zero balance, transferring exactly their available amount to a personal account, which is unusual for a cash-out. It should be reviewed.",
+   "attempts": 1
+  }
+ }
+}
