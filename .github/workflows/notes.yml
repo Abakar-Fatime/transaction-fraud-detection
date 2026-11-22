@@ -1,0 +1,38 @@
+name: analyst-notes
+
+# Generates the analyst case notes with a local LLM (Ollama) and keeps only notes
+# whose numbers and account ids all appear in the explanation they were written from.
+on:
+  push:
+    paths: [".github/workflows/notes.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  notes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m pytest -q
+      - name: Install and start Ollama
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          (ollama serve > ollama.log 2>&1 &)
+          for i in $(seq 1 30); do curl -s localhost:11434 >/dev/null && break; sleep 2; done
+          ollama pull qwen2.5:7b
+      - run: python -m fraud notes --model qwen2.5:7b --limit 60
+      - name: Commit notes
+        run: |
+          git config user.name "Abakar Sougui Fatime"
+          git config user.email "255530159+Abakar-Fatime@users.noreply.github.com"
+          git add console/data/notes.json
+          git commit -m "Add analyst notes generated with a local model"
+          git pull --rebase origin main
+          git push

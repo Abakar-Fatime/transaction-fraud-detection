@@ -1,0 +1,480 @@
+{
+  "data": {
+    "rows": 999999,
+    "steps": [
+      1,
+      45
+    ],
+    "fraud": {
+      "train": 325,
+      "valid": 105,
+      "test": 105
+    },
+    "n": {
+      "train": 576350,
+      "valid": 157475,
+      "test": 266174
+    },
+    "split": {
+      "train_steps": [
+        1,
+        30
+      ],
+      "valid_steps": [
+        31,
+        37
+      ],
+      "test_steps": [
+        38,
+        45
+      ]
+    },
+    "review_cost": 100.0
+  },
+  "models": [
+    {
+      "model": "Drain rule (hand-written)",
+      "valid": {
+        "pr_auc": 0.9165572966344578,
+        "roc_auc": 0.9809364948241481,
+        "recall@0.05%": 0.7142857142857143,
+        "precision@0.05%": 0.9493670886075949,
+        "recall@0.1%": 0.9619047619047619,
+        "precision@0.1%": 0.643312101910828,
+        "recall@0.5%": 0.9619047619047619,
+        "precision@0.5%": 0.12833545108005082
+      },
+      "test": {
+        "pr_auc": 0.8468977177092921,
+        "roc_auc": 0.9856860975375347,
+        "recall@0.05%": 0.9714285714285714,
+        "precision@0.05%": 0.7669172932330827,
+        "recall@0.1%": 0.9714285714285714,
+        "precision@0.1%": 0.38345864661654133,
+        "recall@0.5%": 0.9714285714285714,
+        "precision@0.5%": 0.07663410969196092,
+        "pr_auc_ci95": [
+          0.7790015723663702,
+          0.9030465253178387
+        ]
+      },
+      "test_evasion": {
+        "pr_auc": 0.00039447879958222815,
+        "roc_auc": 0.49997181182324885,
+        "recall@0.05%": 0.0,
+        "precision@0.05%": 0.0,
+        "recall@0.1%": 0.0,
+        "precision@0.1%": 0.0,
+        "recall@0.5%": 0.0,
+        "precision@0.5%": 0.0
+      },
+      "cost": {
+        "threshold": 1.0,
+        "alerts": 117,
+        "caught": 102,
+        "missed_amount": 2380275.31,
+        "review_cost": 11700.0,
+        "total_cost": 2391975.31,
+        "cost_without_model": 144709713.79
+      },
+      "cost_evasion": {
+        "alerts": 15,
+        "caught": 0,
+        "missed_amount": 144709713.79,
+        "review_cost": 1500.0,
+        "total_cost": 144711213.79,
+        "cost_without_model": 144709713.79
+      }
+    },
+    {
+      "model": "Logistic regression, all features",
+      "valid": {
+        "pr_auc": 0.9618744710608869,
+        "roc_auc": 0.9983203067081824,
+        "recall@0.05%": 0.7523809523809524,
+        "precision@0.05%": 1.0,
+        "recall@0.1%": 0.9619047619047619,
+        "precision@0.1%": 0.643312101910828,
+        "recall@0.5%": 0.9619047619047619,
+        "precision@0.5%": 0.12833545108005082
+      },
+      "test": {
+        "pr_auc": 0.970389040087867,
+        "roc_auc": 0.9996237281091962,
+        "recall@0.05%": 0.9619047619047619,
+        "precision@0.05%": 0.7593984962406015,
+        "recall@0.1%": 0.9714285714285714,
+        "precision@0.1%": 0.38345864661654133,
+        "recall@0.5%": 0.9904761904761905,
+        "precision@0.5%": 0.0781367392937641
+      },
+      "test_evasion": {
+        "pr_auc": 0.013983845726436232,
+        "roc_auc": 0.9769522728529603,
+        "recall@0.05%": 0.0,
+        "precision@0.05%": 0.0,
+        "recall@0.1%": 0.0,
+        "precision@0.1%": 0.0,
+        "recall@0.5%": 0.1523809523809524,
+        "precision@0.5%": 0.012021036814425245
+      },
+      "cost": {
+        "threshold": 0.31057763978797226,
+        "alerts": 3469,
+        "caught": 104,
+        "missed_amount": 1395850.55,
+        "review_cost": 346900.0,
+        "total_cost": 1742750.55,
+        "cost_without_model": 144709713.79
+      },
+      "cost_evasion": {
+        "alerts": 3433,
+        "caught": 68,
+        "missed_amount": 63623676.13999999,
+        "review_cost": 343300.0,
+        "total_cost": 63966976.13999999,
+        "cost_without_model": 144709713.79
+      }
+    },
+    {
+      "model": "Logistic regression, no drain features",
+      "valid": {
+        "pr_auc": 0.26140896360085186,
+        "roc_auc": 0.9870718385848334,
+        "recall@0.05%": 0.3619047619047619,
+        "precision@0.05%": 0.4810126582278481,
+        "recall@0.1%": 0.5047619047619047,
+        "precision@0.1%": 0.3375796178343949,
+        "recall@0.5%": 0.6666666666666666,
+        "precision@0.5%": 0.08894536213468869
+      },
+      "test": {
+        "pr_auc": 0.15058916657186952,
+        "roc_auc": 0.985256706593653,
+        "recall@0.05%": 0.38095238095238093,
+        "precision@0.05%": 0.3007518796992481,
+        "recall@0.1%": 0.5428571428571428,
+        "precision@0.1%": 0.21428571428571427,
+        "recall@0.5%": 0.6476190476190476,
+        "precision@0.5%": 0.05108940646130729
+      },
+      "test_evasion": {
+        "pr_auc": 0.0012115848690881904,
+        "roc_auc": 0.8226705603934819,
+        "recall@0.05%": 0.0,
+        "precision@0.05%": 0.0,
+        "recall@0.1%": 0.0,
+        "precision@0.1%": 0.0,
+        "recall@0.5%": 0.0,
+        "precision@0.5%": 0.0
+      },
+      "cost": {
+        "threshold": 0.5415697010331394,
+        "alerts": 16387,
+        "caught": 102,
+        "missed_amount": 2380275.31,
+        "review_cost": 1638700.0,
+        "total_cost": 4018975.31,
+        "cost_without_model": 144709713.79
+      },
+      "cost_evasion": {
+        "alerts": 16304,
+        "caught": 19,
+        "missed_amount": 142861482.07999998,
+        "review_cost": 1630400.0,
+        "total_cost": 144491882.07999998,
+        "cost_without_model": 144709713.79
+      }
+    },
+    {
+      "model": "LightGBM, all features",
+      "valid": {
+        "pr_auc": 0.9839694797193181,
+        "roc_auc": 0.998802155671953,
+        "recall@0.05%": 0.7523809523809524,
+        "precision@0.05%": 1.0,
+        "recall@0.1%": 0.9809523809523809,
+        "precision@0.1%": 0.6560509554140127,
+        "recall@0.5%": 0.9904761904761905,
+        "precision@0.5%": 0.13214739517153748
+      },
+      "test": {
+        "pr_auc": 0.9867293829853239,
+        "roc_auc": 0.9998175016899483,
+        "recall@0.05%": 0.9904761904761905,
+        "precision@0.05%": 0.7819548872180451,
+        "recall@0.1%": 0.9904761904761905,
+        "precision@0.1%": 0.39097744360902253,
+        "recall@0.5%": 0.9904761904761905,
+        "precision@0.5%": 0.0781367392937641,
+        "pr_auc_ci95": [
+          0.9608606432519164,
+          1.0
+        ]
+      },
+      "test_evasion": {
+        "pr_auc": 0.31147844677782843,
+        "roc_auc": 0.9954841288036812,
+        "recall@0.05%": 0.3523809523809524,
+        "precision@0.05%": 0.2781954887218045,
+        "recall@0.1%": 0.3523809523809524,
+        "precision@0.1%": 0.13909774436090225,
+        "recall@0.5%": 0.38095238095238093,
+        "precision@0.5%": 0.03005259203606311
+      },
+      "cost": {
+        "threshold": 0.0008721969659553954,
+        "alerts": 163,
+        "caught": 104,
+        "missed_amount": 1395850.55,
+        "review_cost": 16300.0,
+        "total_cost": 1412150.55,
+        "cost_without_model": 144709713.79
+      },
+      "cost_evasion": {
+        "alerts": 90,
+        "caught": 31,
+        "missed_amount": 24515989.65,
+        "review_cost": 9000.0,
+        "total_cost": 24524989.65,
+        "cost_without_model": 144709713.79
+      }
+    },
+    {
+      "model": "LightGBM, no drain features",
+      "valid": {
+        "pr_auc": 0.8065815701238573,
+        "roc_auc": 0.996629235922621,
+        "recall@0.05%": 0.7047619047619048,
+        "precision@0.05%": 0.9367088607594937,
+        "recall@0.1%": 0.8,
+        "precision@0.1%": 0.535031847133758,
+        "recall@0.5%": 0.9047619047619048,
+        "precision@0.5%": 0.1207115628970775
+      },
+      "test": {
+        "pr_auc": 0.7604927189505921,
+        "roc_auc": 0.9953201541526374,
+        "recall@0.05%": 0.7047619047619048,
+        "precision@0.05%": 0.556390977443609,
+        "recall@0.1%": 0.8095238095238095,
+        "precision@0.1%": 0.31954887218045114,
+        "recall@0.5%": 0.9142857142857143,
+        "precision@0.5%": 0.07212622088655146,
+        "pr_auc_ci95": [
+          0.6899837989237126,
+          0.8356612082667789
+        ]
+      },
+      "test_evasion": {
+        "pr_auc": 0.4244200523636792,
+        "roc_auc": 0.9346171034402282,
+        "recall@0.05%": 0.4666666666666667,
+        "precision@0.05%": 0.3684210526315789,
+        "recall@0.1%": 0.6,
+        "precision@0.1%": 0.23684210526315788,
+        "recall@0.5%": 0.6476190476190476,
+        "precision@0.5%": 0.05108940646130729
+      },
+      "cost": {
+        "threshold": 0.0012162084075901314,
+        "alerts": 2389,
+        "caught": 100,
+        "missed_amount": 1884783.46,
+        "review_cost": 238900.0,
+        "total_cost": 2123683.46,
+        "cost_without_model": 144709713.79
+      },
+      "cost_evasion": {
+        "alerts": 2357,
+        "caught": 68,
+        "missed_amount": 9270588.43,
+        "review_cost": 235700.0,
+        "total_cost": 9506288.43,
+        "cost_without_model": 144709713.79
+      }
+    },
+    {
+      "model": "Isolation Forest (unsupervised)",
+      "valid": {
+        "pr_auc": 0.004117570978253102,
+        "roc_auc": 0.7443600008472602,
+        "recall@0.05%": 0.009523809523809525,
+        "precision@0.05%": 0.012658227848101266,
+        "recall@0.1%": 0.01904761904761905,
+        "precision@0.1%": 0.012738853503184714,
+        "recall@0.5%": 0.06666666666666667,
+        "precision@0.5%": 0.008894536213468869
+      },
+      "test": {
+        "pr_auc": 0.002189374754668314,
+        "roc_auc": 0.7887791190577311,
+        "recall@0.05%": 0.0,
+        "precision@0.05%": 0.0,
+        "recall@0.1%": 0.0,
+        "precision@0.1%": 0.0,
+        "recall@0.5%": 0.0761904761904762,
+        "precision@0.5%": 0.006010518407212622
+      },
+      "test_evasion": {
+        "pr_auc": 0.0024895762466021366,
+        "roc_auc": 0.7916610066597476,
+        "recall@0.05%": 0.0,
+        "precision@0.05%": 0.0,
+        "recall@0.1%": 0.0,
+        "precision@0.1%": 0.0,
+        "recall@0.5%": 0.08571428571428572,
+        "precision@0.5%": 0.0067618332081141996
+      },
+      "cost": {
+        "threshold": 0.4183486941769547,
+        "alerts": 130905,
+        "caught": 89,
+        "missed_amount": 3201650.06,
+        "review_cost": 13090500.0,
+        "total_cost": 16292150.06,
+        "cost_without_model": 144709713.79
+      },
+      "cost_evasion": {
+        "alerts": 130903,
+        "caught": 88,
+        "missed_amount": 3783540.0,
+        "review_cost": 13090300.0,
+        "total_cost": 16873840.0,
+        "cost_without_model": 144709713.79
+      }
+    }
+  ],
+  "importance": [
+    {
+      "feature": "orig_balance_error",
+      "mean_abs_shap": 0.5991945703687577
+    },
+    {
+      "feature": "newbalanceOrig",
+      "mean_abs_shap": 0.551778323856955
+    },
+    {
+      "feature": "is_cash_out",
+      "mean_abs_shap": 0.10303186319437335
+    },
+    {
+      "feature": "drain_ratio",
+      "mean_abs_shap": 0.05949255117858902
+    },
+    {
+      "feature": "dest_balance_error",
+      "mean_abs_shap": 0.05556070652683914
+    },
+    {
+      "feature": "oldbalanceDest",
+      "mean_abs_shap": 0.050842563464176246
+    },
+    {
+      "feature": "amount",
+      "mean_abs_shap": 0.04669097103181127
+    },
+    {
+      "feature": "oldbalanceOrg",
+      "mean_abs_shap": 0.037574022487600826
+    },
+    {
+      "feature": "dest_is_merchant",
+      "mean_abs_shap": 0.03007941164173401
+    },
+    {
+      "feature": "hour",
+      "mean_abs_shap": 0.028608950620239524
+    },
+    {
+      "feature": "newbalanceDest",
+      "mean_abs_shap": 0.02291480890461719
+    },
+    {
+      "feature": "dest_prior_amount_sum",
+      "mean_abs_shap": 0.016657901468819538
+    },
+    {
+      "feature": "log_amount",
+      "mean_abs_shap": 0.012763378110190715
+    },
+    {
+      "feature": "orig_zero_balance",
+      "mean_abs_shap": 0.010281573307973968
+    },
+    {
+      "feature": "dest_prior_count",
+      "mean_abs_shap": 0.008535134662025146
+    },
+    {
+      "feature": "is_transfer",
+      "mean_abs_shap": 0.002899360425673955
+    },
+    {
+      "feature": "is_payment",
+      "mean_abs_shap": 0.001914531883412442
+    },
+    {
+      "feature": "is_debit",
+      "mean_abs_shap": 0.0006496017267001556
+    },
+    {
+      "feature": "is_cash_in",
+      "mean_abs_shap": 0.000623859925961422
+    },
+    {
+      "feature": "dest_first_seen",
+      "mean_abs_shap": 0.0
+    }
+  ],
+  "drift": [
+    {
+      "feature": "dest_balance_error",
+      "psi": 0.17002723158010413
+    },
+    {
+      "feature": "dest_prior_count",
+      "psi": 0.016121105803853373
+    },
+    {
+      "feature": "newbalanceDest",
+      "psi": 0.007966998026540889
+    },
+    {
+      "feature": "oldbalanceOrg",
+      "psi": 0.006779019574910382
+    },
+    {
+      "feature": "amount",
+      "psi": 0.006273298915519428
+    },
+    {
+      "feature": "log_amount",
+      "psi": 0.006273298915519428
+    },
+    {
+      "feature": "orig_balance_error",
+      "psi": 0.006178128250490612
+    },
+    {
+      "feature": "newbalanceOrig",
+      "psi": 0.005484827652627966
+    },
+    {
+      "feature": "dest_prior_amount_sum",
+      "psi": 0.004840921133472458
+    },
+    {
+      "feature": "oldbalanceDest",
+      "psi": 0.004329172499290045
+    },
+    {
+      "feature": "drain_ratio",
+      "psi": 0.0024128872955045603
+    }
+  ],
+  "evasion": {
+    "keep": 0.8
+  },
+  "seconds": 68.2
+}
